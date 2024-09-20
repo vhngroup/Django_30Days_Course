@@ -1,4 +1,4 @@
-##Comando usados en Django##
+## Comandos usados en Django ##
 
 * Django-admin startproject VHNGROUP #Crear proyecto con nombre VHNGROUP
 
@@ -32,6 +32,7 @@ Django permite crear un proyecto que contenga varios aplicaciones. Cada aplicaci
 Un modelo es una clase que representa una tabla de la base de datos.
 En python podemos tener clases dentro de clases, por lo que podemos crear una clase que contenga otra clase.
 #### Creamos una tabla de nombre Post. con las columnas title, slug y body ####
+```
 class Post(models.Model):
     class Status(models.TextChoices):
         DRAFT = 'DF', 'Draft'
@@ -54,6 +55,7 @@ class Post(models.Model):
         ]
     def __str__(self):
         return self.title
+        ```
 
 * Es importante activar las aplicaciones que se van a usar en la web, en el archivo settings.py en al seccion INSTALLED_APPS
 * Para aplicar las migraciones se debe ejecutar el comando "manage.py makemigrations blog". se debe indicar el nombre de la aplicacion
